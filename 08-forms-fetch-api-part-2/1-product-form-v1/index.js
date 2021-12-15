@@ -47,7 +47,8 @@ export default class ProductForm {
           headers: {
             Authorization: `Client-ID ${IMGUR_CLIENT_ID}`,
           },
-          body: formData
+          body: formData,
+          referrer: ''
         });
 
         imageListContainer.append(this.getImageItem(result.data.link, file.name));
